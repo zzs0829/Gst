@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<node>
+<interface name="com.hsae.reverse.ctrl">
+    <method name="HmiStart"/>
+    <method name="StopLogo"/>
+    <method name="GetReverseState">
+      <arg type="y" name="reverse_state" direction="out"/>
+    </method>
+    <method name="StartPlayReverse"/>
+    <method name="SetWheelAngle">
+      <arg type="d" name="wheel_angle" direction="in"/>
+    </method>
+    <signal name="UpdateReverseState">
+      <arg type="y" name="state"/>
+    </signal>
+    <signal name="UpdateAnimationState">
+      <arg type="y" name="state"/>
+    </signal>
+    <signal name="LogoIsKilled"/>
+  </interface>
+  </node>
